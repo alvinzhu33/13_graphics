@@ -43,7 +43,6 @@ print("m3 x m4:")
 matrix_mult(m3, m4)
 print_matrix(m4)
 
-
 print("--------------------------------------")
 #Draw Stuff
 print("\nDraw")
@@ -51,9 +50,21 @@ screen = new_screen()
 color = [ 0, 255, 0 ]
 matrix = new_matrix()
 
-add_edge(matrix, 200, 200, 0, 300, 300, 0)
-print_matrix(matrix)
-add_point(matrix, 400, 400)
+add_edge(matrix, 0, 10, 0, 10, 10, 0)
+add_edge(matrix, 10, 0, 0, 10, 10, 0)
+
+add_edge(matrix, 10, 0, 0, 20, 5, 0)
+add_edge(matrix, 10, 10, 0, 20, 5, 0)
+add_edge(matrix, 0, 10, 0, 5, 20, 0)
+add_edge(matrix, 10, 10, 0, 5, 20, 0)
+add_edge(matrix, 10, 10, 0, 20, 20, 0)
+
+#print_matrix(matrix)
+add_point(matrix, 0, 0)
 print_matrix(matrix)
 draw_lines( matrix, screen, color )
+for x in range(10):
+    scalar_mult(matrix, 2)
+    draw_lines(matrix, screen, color)
+
 display(screen)
