@@ -24,7 +24,7 @@ def scalar_mult( matrix, s ):
 
 #m1 * m2 -> m2
 def matrix_mult( m1, m2 ):
-    if(len(m1[0])==len(m2)):
+    if(len(m1)==len(m2[0])):
         m3 = new_matrix()
         r1=0
         c=0
