@@ -56,8 +56,8 @@ def matrix_mult( m1, m2 ):
 
 def new_matrix(rows = 4, cols = 4):
     m = []
-    for c in range( cols ):
+    for c in range( rows ):
         m.append( [] )
-        for r in range( rows ):
+        for r in range( cols ):
             m[c].append( 0 )
     return m
