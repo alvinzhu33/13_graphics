@@ -25,9 +25,15 @@ def scalar_mult( matrix, s ):
 #m1 * m2 -> m2
 def matrix_mult( m1, m2 ):
     if(len(m1)==len(m2[0])):
-        m3 = new_matrix()
-        r1=0
-        c=0
+        m3 = new_matrix(len(m1), len(m2[0]))
+        for r1 in range(len(m1)):
+            #y = r1
+            for c2 in range(len(m2[0])):
+                newval = 0
+                #x = c2
+                for r in range(len(m2)):
+                        newval += m1[r1][r] * m2[r][c2]
+                m3[r1][c2] = newval
         '''for r in range(len(m1)):
             s = r
             for c in range(len(m1[r])):
@@ -42,14 +48,8 @@ def matrix_mult( m1, m2 ):
             m3[r1][c]= newval
             r1+=1
             c+=1'''
-        for r1 in range(len(m1)):
-            newval = 0
-            for r2 in range(len(m1[r1])):
-                newval += m1[r1][r2] * m2[r2][r1]
-            m3[r1][c] = newval
-            c+=1
         for y in range(len(m2)):
-            for x in range(len(m2[y])):
+            for x in range(len(m1[y])):
                 m2[y][x] = m3[y][x]
 
 

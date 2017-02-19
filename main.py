@@ -2,7 +2,7 @@ from display import *
 from draw import *
 
 #Matrix Stuff
-'''print("\nMatrix")
+print("\nMatrix")
 m = new_matrix()
 m2 = new_matrix()
 
@@ -28,21 +28,23 @@ print_matrix(m2)
 print("Multiple m by m2:")
 matrix_mult(m,m2)
 print_matrix(m2)
-'''
+
+print("--------------------------------------")
 print("m3:")
-m3 = [[0, 1, 2], [3, 4, 5]]
+m3 = [[0, 1 , 4], [2, 3, 5], [7, 8, 9]]
 print_matrix(m3)
 print("m4:")
-m4 = [[0, 1], [2, 3], [4, 5]]
+m4 = [[0, 1 , 4], [2, 3, 5], [7, 8, 9]]
 print_matrix(m4)
-print("m4 x m3:")
-matrix_mult(m4, m3)
-print_matrix(m3)
-#print("m3 x m4:")
-#matrix_mult(m3, m4)
-#print_matrix(m4)
+print("m4 scaled by 2:")
+scalar_mult(m4, 2)
+print_matrix(m4)
+print("m3 x m4:")
+matrix_mult(m3, m4)
+print_matrix(m4)
 
-'''
+
+print("--------------------------------------")
 #Draw Stuff
 print("\nDraw")
 screen = new_screen()
@@ -54,4 +56,4 @@ print_matrix(matrix)
 add_point(matrix, 400, 400)
 print_matrix(matrix)
 draw_lines( matrix, screen, color )
-#display(screen)'''
+display(screen)
