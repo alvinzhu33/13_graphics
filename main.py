@@ -61,7 +61,10 @@ add_edge(matrix, 10, 10, 0, 20, 20, 0)
 
 #print_matrix(matrix)
 add_point(matrix, 0, 0)
-print_matrix(matrix)
+add_point(matrix, 10, 10)
+add_point(matrix, 0, 10)
+add_point(matrix, 10, 0)
+#print_matrix(matrix)
 draw_lines( matrix, screen, color )
 for x in range(10):
     scalar_mult(matrix, 2)
