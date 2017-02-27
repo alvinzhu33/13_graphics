@@ -26,7 +26,7 @@ scalar_mult(m2,5)
 print_matrix(m2)
 
 print("Multiple m by m2:")
-matrix_mult(m,m2)
+m2 = matrix_mult(m,m2)
 print_matrix(m2)
 
 print("--------------------------------------")
@@ -40,10 +40,26 @@ print("m4 scaled by 2:")
 scalar_mult(m4, 2)
 print_matrix(m4)
 print("m3 x m4:")
-matrix_mult(m3, m4)
+m4 = matrix_mult(m3, m4)
 print_matrix(m4)
 
 print("--------------------------------------")
+
+print("m5:")
+m5 = [[0, 1 , 4, 10], [2, 3, 5, 11], [7, 8, 9, 12], [13, 14, 15, 16]]
+print_matrix(m5)
+print("m6:")
+m6 = [[0, 1 , 4], [2, 3, 5], [7, 8, 9], [10, 11, 12]]
+print_matrix(m6)
+print("m6 scaled by 3:")
+scalar_mult(m6, 3)
+print_matrix(m6)
+print("m5 x m6:")
+m6 = matrix_mult(m5, m6)
+print_matrix(m6)
+
+print("--------------------------------------")
+
 #Draw Stuff
 print("\nDraw")
 screen = new_screen()
