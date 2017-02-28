@@ -30,6 +30,7 @@ m2 = matrix_mult(m,m2)
 print_matrix(m2)
 
 print("--------------------------------------")
+
 print("m3:")
 m3 = [[0, 1 , 4], [2, 3, 5], [7, 8, 9]]
 print_matrix(m3)
@@ -64,9 +65,24 @@ print("--------------------------------------")
 print("\nDraw")
 screen = new_screen()
 color = [ 0, 255, 0 ]
-matrix = new_matrix()
+matrix = new_matrix(4,2)
 
+print("Default new matrix")
+print_matrix(matrix)
+print("Add point 0,0,0")
+add_point(matrix, 0, 0)
+print_matrix(matrix)
+print("Add point 10,10,0")
+add_point(matrix, 10, 10)
+print_matrix(matrix)
+print("Add edge 0,10,0 to 10,10,0")
 add_edge(matrix, 0, 10, 0, 10, 10, 0)
+print_matrix(matrix)
+
+add_point(matrix, 0, 10)
+add_point(matrix, 10, 0)
+#print_matrix(matrix)
+
 add_edge(matrix, 10, 0, 0, 10, 10, 0)
 
 add_edge(matrix, 10, 0, 0, 20, 5, 0)
@@ -80,11 +96,7 @@ add_edge(matrix, 10, 0, 0, 3, 2, 0)
 add_edge(matrix, 5, 5, 0, 3, 2, 0)
 
 #print_matrix(matrix)
-add_point(matrix, 0, 0)
-add_point(matrix, 10, 10)
-add_point(matrix, 0, 10)
-add_point(matrix, 10, 0)
-#print_matrix(matrix)
+
 draw_lines( matrix, screen, color )
 
 for x in range(5):
